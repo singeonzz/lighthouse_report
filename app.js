@@ -8,12 +8,11 @@ const fs = require('fs');
 
 function generateReport(runnerResult, name) {
   const now = new Date();
-  const Y = now.getFullYear();
   const M = now.getMonth();
   const D = now.getDate();
   const H = now.getHours();
   const m = now.getMinutes();
-  const filename = `${name}_lhr-report@${M + 1 < 10 ? '0' + (M + 1) : M + 1}_${D}_${H}_${m}.html`;
+  const filename = `${name}_report@${M + 1 < 10 ? '0' + (M + 1) : M + 1}_${D}_${H}_${m}.html`;
   const htmlReportPath = path.join(__dirname, 'public', filename);
 
   // 读写文件
