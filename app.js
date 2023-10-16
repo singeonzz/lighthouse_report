@@ -21,7 +21,7 @@ function generateReport(runnerResult, name) {
       console.error('Failed to create file:', err);
       return;
     }
-    console.log('File created successfully!');
+    console.log(`File: ${filename} created successfully!`);
   });
 
 }
