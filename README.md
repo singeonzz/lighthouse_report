@@ -1,8 +1,6 @@
 # lighthouse_report
-lighthouse测试
 
-
-### lighthouserc 中的配置
+### 配置
 #### options
 - port: number; // chrome的端口
 - logLevel: 'silent' | 'error' | 'info' | 'verbose'; // 日志等级
@@ -16,9 +14,9 @@ lighthouse测试
 - locale: Locale; // 语言
 
 #### configs
-extends: 'lighthouse:default' | undefined; // 是否继承默认配置
-settings: Object | undefined; // 运行时配置
-passes: Object[]; // 采集器
-audits: string[]; // 审查器
-categories: Object | undefined; // 类别
-groups: Object | undefined; // 分组
+- extends: 'lighthouse:default' | undefined; // 是否继承默认配置
+- settings: Object | undefined; // 运行时配置
+- passes: Object[]; // 采集器
+- audits: string[]; // 审查器
+- categories: Object | undefined; // 类别
+- groups: Object | undefined; // 分组
