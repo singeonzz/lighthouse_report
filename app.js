@@ -12,7 +12,8 @@ function generateReport(runnerResult, name) {
   const D = now.getDate();
   const H = now.getHours();
   const m = now.getMinutes();
-  const filename = `${name}_report@${M + 1 < 10 ? '0' + (M + 1) : M + 1}_${D}_${H}_${m}.html`;
+  const s = now.getSeconds();
+  const filename = `${name}_report@${M + 1 < 10 ? '0' + (M + 1) : M + 1}_${D}_${H}_${m}_${s}.html`;
   const htmlReportPath = path.join(__dirname, 'public', filename);
 
   // 读写文件
@@ -29,7 +30,12 @@ function generateReport(runnerResult, name) {
 (async () => {
 
   const testUrl = {
-    galaxyVisV1: 'http://172.20.20.129:8084/test_all.html'
+    // V1: 'http://172.20.20.129:8084/test_all.html',
+    // V2: 'http://172.20.20.129:8083/examples2.html',
+    sigma: 'http://172.20.20.129:8082/sigma',
+    G6:'http://172.20.20.129:8082/g6',
+    cytoscape:'http://172.20.20.129:8082/cytoscape',
+    forcegraph:'http://172.20.20.129:8082/forcegraph'
   }
 
   for (let name in testUrl) {
